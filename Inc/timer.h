@@ -130,6 +130,7 @@ typedef struct {
 #define		TIMER3_UPDATE_GEN_ENABLE()		(TIMER3->TIMx_EGR |= (1u << 0))
 #define		TIMER3_PWM_ENABLE()				(TIMER3->TIMx_CCER |= (1u << 0))
 #define		TIMER3_PWM_DISABLE()			(TIMER3->TIMx_CCER &= ~(1u << 0))
+#define     TIMER3_ENABLED()                (TIMER3->TIMx_CCER & (1u << 0))
 
 void timerxConfig(Timer_RegDef_t* selectTimer,uint16_t prescaler, uint32_t autoReload );
 void timerxPeripheralEnable(Timer_RegDef_t* selectTimer);
@@ -140,3 +141,4 @@ void timer5InterruptEnable();
 void timer3PwmEnable(uint32_t dutyCycle);
 void timerxCaptureEnable(Timer_RegDef_t* selectTimer, CC_Channel_e channel, CC_Mode_e mode, CC_Edge_Selection_e edge);
 #endif /* TIMER_H_ */
+
