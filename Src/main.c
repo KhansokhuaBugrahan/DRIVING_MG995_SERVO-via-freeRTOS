@@ -72,12 +72,11 @@ void vMyTask3GeneratePulse(void* pvTask3 )
 	while(1)
 	{
 
-
-
+		if(TIMER3_ENABLED())
+		{	
 		     uint16_t currentAdcVal = adc1ReadValue();
 
 			 int16_t pulseWidth = 450 + ((int32_t)currentAdcVal * 2100) / 3100;
-
 
 			 emaFilteredPulse = previousPulseRead + ((pulseWidth - previousPulseRead) >> 3);
 
@@ -99,6 +98,7 @@ void vMyTask3GeneratePulse(void* pvTask3 )
 					}
 				 }
 			}
+		}
 
 			   vTaskDelay(pdMS_TO_TICKS(20));
 	}
