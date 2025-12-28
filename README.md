@@ -18,4 +18,4 @@ In both attempts, we aim to prevent motor from jittering.
 Lastly, defining slew-rate.  
 We use this method  to obtain a constant speed in movement.                                            
 In per cycle, the motor can only move as much as slew-rate.                                         
-It also stabilizes the servo movement.
+It also stabilizes the servo movement. You can adjust this constant SLEW_RATE.
