@@ -18,4 +18,8 @@ In both attempts, we aim to prevent motor from jittering.
 Lastly, defining slew-rate.  
 We use this method  to obtain a constant speed in movement.                                            
 In per cycle, the motor can only move as much as slew-rate.                                         
-It also stabilizes the servo movement. You can adjust this constant SLEW_RATE.
+It also stabilizes the servo movement. You can adjust this constant SLEW_RATE.    
+
+We have to set interrupt priority for EXTI9_5.              
+Priority levels 0–4 are reserved for system handlers used by FreeRTOS.     
+As default EXTI9_5 priortiy is 0 (highest). We need to pull that down.        
