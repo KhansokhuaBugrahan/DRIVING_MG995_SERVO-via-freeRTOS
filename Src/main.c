@@ -25,6 +25,7 @@
 
 #define    enableServo        1
 #define    disableServo       0
+#define    SLEW_RATE          10
 
  SemaphoreHandle_t semEnableServo; // created a semaphore
 
@@ -86,14 +87,14 @@ void vMyTask3GeneratePulse(void* pvTask3 )
 			{
 				 if(previousPulseRead <= 2500 && previousPulseRead >= 500)
 				 {
-					if(delta > 10)
+					if(delta > SLEW_RATE)
 					{
-						 previousPulseRead += 10;
+						 previousPulseRead += SLEW_RATE;
 						 TIMER3->TIMx_CCR1 = previousPulseRead;
 					}
-					else if(delta < -10)
+					else if(delta < -SLEW_RATE)
 					{
-						 previousPulseRead -= 10;
+						 previousPulseRead -= SLEW_RATE;
 						 TIMER3->TIMx_CCR1 = previousPulseRead;
 					}
 				 }
