@@ -9,7 +9,8 @@ https://github.com/KhansokhuaBugrahan/LED_TOGGLE-via-freeRTOS
 In the above link, you can follow the steps in readme file to solve issues.
 
 
-Deadband width is 5us in the datasheet. That means servo controller inside the motor perceives  x <= 5us , pulses as a noise.                               
+Deadband width is 5us in the datasheet.                                  
+That means servo controller inside the motor perceives  x <= 5us , pulses as a noise.                                              
 We make sure our servo does not pull the current because of this constrain by ignoring  0 - 5us pulses.                        
 
 EMA Filter, is a digital filter which cuts off the noises. In this filter, previous data is used to define new data with the current incoming data.             
