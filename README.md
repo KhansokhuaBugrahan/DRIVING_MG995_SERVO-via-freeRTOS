@@ -1,6 +1,9 @@
 # DRIVING_MG995_SERVO-via-freeRTOS
 The servo motor has ability to rotate  by a POT between 0 - 180 degree. Also, motor on/off option is available.
 
+Board: STM32F407G-DISC1                              
+  IDE: STM32CubeIDE                     
+  
 Note: if you do not know how to clear errors when integrating freeRTOS file into the project.
 https://github.com/KhansokhuaBugrahan/LED_TOGGLE-via-freeRTOS                               
 In the above link, you can follow the steps in readme file to solve issues.
@@ -23,3 +26,8 @@ It also stabilizes the servo movement. You can adjust this constant SLEW_RATE.
 We have to set interrupt priority for EXTI9_5.              
 Priority levels 0–4 are reserved for system handlers used by FreeRTOS.     
 As default EXTI9_5 priortiy is 0 (highest). We need to pull that down.        
+
+You may consider 4 blinking leds debugger.
+
+
+
