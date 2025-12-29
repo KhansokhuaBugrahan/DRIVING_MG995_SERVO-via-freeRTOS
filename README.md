@@ -29,5 +29,7 @@ As default EXTI9_5 priortiy is 0 (highest). We need to pull that down.
 
 You may consider 4 blinking leds debugger.
 
+Click the icon to redirect YouTube and watch the MG995 Servo video.                                           
+[![Custom Thumbnail](https://github.com/KhansokhuaBugrahan/DRIVING_MG995_SERVO-via-freeRTOS/blob/main/gif.gif)](https://www.youtube.com/shorts/Kpw473yBjIc)
 
 
