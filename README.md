@@ -13,7 +13,7 @@ Deadband width is 5us in the datasheet.
 That means servo controller inside the motor perceives  x <= 5us , pulses as a noise.                                              
 We make sure our servo does not pull the current because of this constrain by ignoring  0 - 5us pulses.                        
 
-EMA Filter, is a digital filter which cuts off the noises. In this filter, previous data is used to define new data with the current incoming data.             
+EMA Filter, is a digital filter which cuts off the noises. In this filter, previous data is used to define new data with the current incoming data.                            
 new data = 0.875 * previous data + 0.125 * current incoming data. Previous data is always more dominant.                          
 In this way, we only store previouse data to utilize in the next step.                                            
 
@@ -28,7 +28,10 @@ We have to set interrupt priority for EXTI9_5.
 Priority levels 0–4 are reserved for system handlers used by FreeRTOS.     
 As default EXTI9_5 priortiy is 0 (highest). We need to pull that down.        
 
-You may consider 4 blinking leds debugger.
+You may consider 4 blinking leds debugger.                       
+
+Since POT's wiper is a bit problematic, I clamped the DR value of ADC at 3100.                                     
+In this way, I removed noisy part of the POT. Now, it only mechanically rotates without acting on anything.                  
 
 Click the icon to redirect YouTube and watch the MG995 Servo video.                                           
 [![Custom Thumbnail](https://github.com/KhansokhuaBugrahan/DRIVING_MG995_SERVO-via-freeRTOS/blob/main/gif.gif)](https://www.youtube.com/shorts/Kpw473yBjIc)
