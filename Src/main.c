@@ -26,9 +26,11 @@
 #define    enableServo        1
 #define    disableServo       0
 #define    SLEW_RATE          10
+#define    MAX_ADC_VAL        3100
+#define    MAX_PULSE_WIDTH    2500
+#define    MIN_PULSE_WIDTH    500
 
- SemaphoreHandle_t semEnableServo; // created a semaphore
-
+SemaphoreHandle_t semEnableServo; // created a semaphore
 
 void vMyTask1BlinkLeds(void* pvTask1);
 void vMyTask2EnableServo(void* pvTask3);
@@ -36,6 +38,7 @@ void vMyTask3GeneratePulse(void* pvTask2);
 
 void vMyTask1BlinkLeds(void* pvTask1 )
 {
+
 
 	uint8_t ledColor = *(uint8_t*)(pvTask1);
 
@@ -76,7 +79,7 @@ void vMyTask3GeneratePulse(void* pvTask3 )
 		{	
 		     uint16_t currentAdcVal = adc1ReadValue();
 
-			 int16_t pulseWidth = 450 + ((int32_t)currentAdcVal * 2100) / 3100;
+			 int16_t pulseWidth = 450 + ((int32_t)currentAdcVal * 2100) / MAX_ADC_VAL;
 
 			 emaFilteredPulse = previousPulseRead + ((pulseWidth - previousPulseRead) >> 3);
 
@@ -84,7 +87,7 @@ void vMyTask3GeneratePulse(void* pvTask3 )
 
 			if(abs(delta) > 5)
 			{
-				 if(previousPulseRead <= 2500 && previousPulseRead >= 500)
+				 if(previousPulseRead <= MAX_PULSE_WIDTH && previousPulseRead >= MIN_PULSE_WIDTH)
 				 {
 					if(delta > SLEW_RATE)
 					{
