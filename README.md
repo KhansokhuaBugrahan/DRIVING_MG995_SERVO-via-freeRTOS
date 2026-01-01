@@ -8,6 +8,7 @@ Note: if you do not know how to clear errors when integrating freeRTOS file into
 https://github.com/KhansokhuaBugrahan/LED_TOGGLE-via-freeRTOS                               
 In the above link, you can follow the steps in readme file to solve issues.
 
+You can include main.c from either joystick file or POT file in main folder.
 
 Deadband width is 5us in the datasheet.                                  
 That means servo controller inside the motor perceives  x <= 5us , pulses as a noise.                                              
@@ -33,7 +34,8 @@ You may consider 4 blinking leds debugger.
 Since POT's wiper is a bit problematic, I clamped the DR value of ADC at 3100.                                     
 In this way, I removed noisy part of the POT. Now, it only mechanically rotates without acting on anything.                  
 
-Click the icon to redirect YouTube and watch the MG995 Servo video.                                           
+
+Click the icon to redirect YouTube and watch the MG995 Servo POT video .                                           
 [![Custom Thumbnail](https://github.com/KhansokhuaBugrahan/DRIVING_MG995_SERVO-via-freeRTOS/blob/main/gif.gif)](https://www.youtube.com/shorts/Kpw473yBjIc)
 
 
