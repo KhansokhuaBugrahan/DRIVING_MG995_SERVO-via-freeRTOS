@@ -35,7 +35,16 @@ Since POT's wiper is a bit problematic, I clamped the DR value of ADC at 3100.
 In this way, I removed noisy part of the POT. Now, it only mechanically rotates without acting on anything.                  
 
 
-Click the icon to redirect YouTube and watch the MG995 Servo POT video .                                           
+Click the icon  to redirect YouTube and watch the MG995 Servo POT video .                                           
 [![Custom Thumbnail](https://github.com/KhansokhuaBugrahan/DRIVING_MG995_SERVO-via-freeRTOS/blob/main/gif.gif)](https://www.youtube.com/shorts/Kpw473yBjIc)
 
 
+
+
+
+
+
+
+Click the icon below to redirect YouTube and watch the MG995 Servo JOYSTICK video .                                           
+In the  second implementation, the servo motor is snapping back to the mid-point in idle.
+[![Custom Thumbnail](https://github.com/KhansokhuaBugrahan/DRIVING_MG995_SERVO-via-freeRTOS/blob/main/gif.gif)](https://www.youtube.com/shorts/IurvvpIOO_4)
