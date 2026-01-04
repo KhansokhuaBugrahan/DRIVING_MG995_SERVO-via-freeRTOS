@@ -44,7 +44,6 @@ Click the icon  to redirect YouTube and watch the MG995 Servo POT video .
 
 
 
-
 Click the icon below to redirect YouTube and watch the MG995 Servo JOYSTICK video .                                           
 In the  second implementation, the servo motor is snapping back to the mid-point in idle.
 [![Custom Thumbnail](https://github.com/KhansokhuaBugrahan/DRIVING_MG995_SERVO-via-freeRTOS/blob/main/gif.gif)](https://www.youtube.com/shorts/IurvvpIOO_4)
@@ -68,5 +67,6 @@ In the  second implementation, the servo motor is snapping back to the mid-point
 
 When using joystick, in idle it gives output around 2000 DR val( mid point). So, we need to map  0-3100 raw ADC values into the 500 - 2500 us pulses by linearizing.
 And this analytic geometry approach helps us to find a proper equation even though it seems easy.                
-Below link, you can examine the equation and illustrations which is also located in SERVO_JOYSTICK folder.                                            
-https://github.com/KhansokhuaBugrahan/DRIVING_MG995_SERVO-via-freeRTOS/blob/main/Src/main/SERVO_JOYSTICK/ADCmapping.jpeg
+Below link, you can examine the equations and illustrations which is also located in SERVO_JOYSTICK folder.                                            
+https://github.com/KhansokhuaBugrahan/DRIVING_MG995_SERVO-via-freeRTOS/blob/main/Src/main/SERVO_JOYSTICK/ADCmapping.jpeg              
+joystick datasheet --> https://naylampmechatronics.com/img/cms/Datasheets/000036%20-%20datasheet%20KY-023-Joy-IT.pdf 
