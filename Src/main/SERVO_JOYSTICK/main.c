@@ -238,13 +238,7 @@ int main(void) {
      xTaskCreate(vMyTask3GeneratePulse, "DEBUGADC", 128, NULL, 2, &myTask1Handler);
      xTaskCreate(vMyTask2EnableServo, "DEBUGPWM", 128, NULL, 3, &myTask1Handler);
 
-
-     /*
-      * Now lets do it with the jostick, in idle state, Pot wiper is in mid.
-      * We use 12 bit adc average value should be around 2000
-      */
-
-      vTaskStartScheduler();
+     vTaskStartScheduler();
 
 
      while(1);
