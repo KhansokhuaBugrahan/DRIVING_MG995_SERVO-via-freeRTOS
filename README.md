@@ -70,3 +70,21 @@ And this analytic geometry approach helps us to find a proper equation even thou
 Below link, you can examine the equations and illustrations which is also located in SERVO_JOYSTICK folder.                                            
 https://github.com/KhansokhuaBugrahan/DRIVING_MG995_SERVO-via-freeRTOS/blob/main/Src/main/SERVO_JOYSTICK/ADCmapping.jpeg              
 joystick datasheet --> https://naylampmechatronics.com/img/cms/Datasheets/000036%20-%20datasheet%20KY-023-Joy-IT.pdf 
+
+
+                                                             
+In the  third implementation, the servo motor runs at constant speed in entire operation.                                                   
+When it comes back from the max range (lower side), it is quite smooth.                         
+However, when it comes from upper side, it takes a few seconds to stabilize in mid point.                
+Click the icon below to redirect YouTube and watch the MG995 Servo JOYSTICK full slew rate movement.                         
+[![Custom Thumbnail](https://github.com/KhansokhuaBugrahan/DRIVING_MG995_SERVO-via-freeRTOS/blob/main/gif.gif)](https://youtube.com/shorts/tfo6ze2H3Y4)
+
+
+
+
+
+
+
+
+
+
