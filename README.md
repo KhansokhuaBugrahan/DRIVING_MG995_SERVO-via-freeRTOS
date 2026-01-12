@@ -8,7 +8,8 @@ Note: if you do not know how to clear errors when integrating freeRTOS file into
 https://github.com/KhansokhuaBugrahan/LED_TOGGLE-via-freeRTOS                               
 In the above link, you can follow the steps in readme file to solve issues.
 
-You can include main.c from either joystick file or POT file in main folder.
+You can include main.c from either joystick files or POT file in main folder.                                                                                              
+Additionally, you need to include modified source files and header files  which are also located in main folder for multi-servo(two servo control)              
 
 Deadband width is 5us in the datasheet.                                  
 That means servo controller inside the motor perceives  x <= 5us , pulses as a noise.                                              
