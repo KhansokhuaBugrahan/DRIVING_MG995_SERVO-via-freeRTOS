@@ -88,4 +88,9 @@ Click the icon below to redirect YouTube and watch the MG995 Servo JOYSTICK full
 
 
 
+In the  fourth implementation, the two servo motor runs at constant speed in entire operation.  
+Click the icon below to redirect YouTube and watch the MG995 Multi(two) Servo JOYSTICK full slew rate movement.     
+[![Custom Thumbnail](https://github.com/KhansokhuaBugrahan/DRIVING_MG995_SERVO-via-freeRTOS/blob/main/gif.gif)](https://www.youtube.com/shorts/u8_ZhK-d968)
+
+
 
