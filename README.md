@@ -88,9 +88,19 @@ Click the icon below to redirect YouTube and watch the MG995 Servo JOYSTICK full
 
 
 
+
 In the  fourth implementation, the two servo motor runs at constant speed in entire operation.  
 Click the icon below to redirect YouTube and watch the MG995 Multi(two) Servo JOYSTICK full slew rate movement.     
 [![Custom Thumbnail](https://github.com/KhansokhuaBugrahan/DRIVING_MG995_SERVO-via-freeRTOS/blob/main/gif.gif)](https://www.youtube.com/shorts/u8_ZhK-d968)
 
 
+
+
+
+In the  fifth implementation, the two servo motor is completely controlled by joystick.                                                         
+In previous operations, we were using an external button to control the motors' state but now we use joystick's own switch.                                                  
+The difference here, since the switch is active low, we trigger the interrupt in falling edge.                                    
+Additionally, you need to include other multi servo files from main path.                    
+Click the icon below to redirect YouTube and watch the MULTI SERVO FULL JOYSTICK CONTROL.                            
+[![Custom Thumbnail](https://github.com/KhansokhuaBugrahan/DRIVING_MG995_SERVO-via-freeRTOS/blob/main/gif.gif)](https://youtube.com/shorts/9kMJpKzMdMA)
 
