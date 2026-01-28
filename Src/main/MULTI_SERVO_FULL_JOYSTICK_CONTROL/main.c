@@ -72,10 +72,10 @@ void vMyTask3GeneratePulse(void* pvTask3 )
 			 ADC1_START_CONVERSION();
 
 		     uint16_t currentAdcVal = adc1ReadValue();
-		     uint16_t pulseServo1 = returnPulseMsServoX(currentAdcVal,&servo1);
+		     uint16_t pulseServo1 = returnPulseUsServoX(currentAdcVal,&servo1);
 
 		     currentAdcVal = adc1ReadValue();
-		     uint16_t pulseServo2 = returnPulseMsServoX(currentAdcVal, &servo2);
+		     uint16_t pulseServo2 = returnPulseUsServoX(currentAdcVal, &servo2);
 
 
 		     TIMER3->TIMx_CCR1 = pulseServo1;
