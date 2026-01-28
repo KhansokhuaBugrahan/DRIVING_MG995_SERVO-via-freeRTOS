@@ -10,7 +10,7 @@
 
 
 
-uint16_t returnPulseMsServoX(uint16_t currentAdcVal, Servo_Param* servoX)
+uint16_t returnPulseUsServoX(uint16_t currentAdcVal, Servo_Param* servoX)
 {
 
 				 int16_t pulseWidth;
@@ -53,3 +53,4 @@ uint16_t returnPulseMsServoX(uint16_t currentAdcVal, Servo_Param* servoX)
 				return servoX->previousPulseRead;
 
 }
+
