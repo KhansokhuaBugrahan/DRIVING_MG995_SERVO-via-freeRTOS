@@ -78,11 +78,11 @@ void vMyTask3GeneratePulse(void* pvTask3 )
 
 			 uint16_t buffer1 = dmaBuffer[0];
 			 if(buffer1 > 3100) buffer1 = 3100;
-		     uint16_t pulseServo1 = returnPulseMsServoX(buffer1,&servo1);
+		     uint16_t pulseServo1 = returnPulseUsServoX(buffer1,&servo1);
 
 		     uint16_t buffer2 = dmaBuffer[1];
 		     if(buffer2 > 3100) buffer2 = 3100;
-		     uint16_t pulseServo2 = returnPulseMsServoX(buffer2, &servo2);
+		     uint16_t pulseServo2 = returnPulseUsServoX(buffer2, &servo2);
 
 		     TIMER3->TIMx_CCR1 = pulseServo1;
 		     TIMER3->TIMx_CCR3 = pulseServo2;
