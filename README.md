@@ -128,8 +128,9 @@ LM393 output is open collector in case of V+ > Vref that means we can have pull 
 The interesting thing here is I have tried many times to use LM393's output for triggering my GPIO pin.
 However, it was not reliable at all. And accidently I wired my output to Vref than it started working perfectly. 
 The current circuit uses Vref as output for triggering B1 pin which was configured to save servo positions. 
-
-Also, you can adjust the servo movement speed by adjusting tuning parameter in servo.c file changing coefficient 200.
+ 
+Also, you can adjust the servo movement speed by adjusting tuning parameter in servo.c file changing coefficient 200.                                           
+Of course it does not change the slew rate, only senstivity of perception on joystick.                                      
 
 I share the circuit diagram and video of this implementation. main directory name MULTI_SERVO_SINGLE_CONTROL
 
