@@ -105,3 +105,33 @@ Additionally, you need to include the same  source and header files as we use fo
 Click the icon below to redirect YouTube and watch the MULTI SERVO FULL JOYSTICK CONTROL.                                         
 [![Custom Thumbnail](https://github.com/KhansokhuaBugrahan/DRIVING_MG995_SERVO-via-freeRTOS/blob/main/gif.gif)](https://youtube.com/shorts/9kMJpKzMdMA)
 
+
+
+
+
+
+
+
+
+
+
+In the  sixth implementation, the two servo motor is not snapping back to mid-point anymore. 
+All previus functions exist on this newest model except motor movement.                 
+It has an EEPROM (AT24C32) and a voltage-drop detector circuit(based on LM393) which notifies EEPROM.            
+Also, individual control on each servo is available.                          
+It always maintain the previous position because of EEPROM save.                  
+I power my board using PC via USB socket.                       
+I have a voltage divider resistors on Vref and V+ on LM393, 5V input that comes from board's 5V pin.                
+
+LM393 output is open collector in case of V+ > Vref that means we can have pull up resistor on output and trigger some GPIO.
+The interesting thing here is I have tried many times to use LM393's output for triggering my GPIO pin.
+However, it was not reliable at all. And accidently I wired my output to Vref than it started working perfectly. 
+The current circuit uses Vref as output for triggering B1 pin which was configured to save servo positions. 
+
+Also, you can adjust the servo movement speed by adjusting tuning parameter in servo.c file changing coefficient 200.
+
+I share the circuit diagram and video of this implementation
+
+
+
+
